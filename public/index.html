@@ -200,11 +200,6 @@
         background: var(--danger-bg);
         color: var(--danger);
       }
-      .icon-btn {
-        width: 42px;
-        height: 42px;
-        padding: 0;
-      }
 
       .survey-view {
         display: block;
@@ -1075,17 +1070,6 @@
         gap: 12px;
         margin-bottom: 20px;
       }
-      .lock-icon {
-        width: 46px;
-        height: 46px;
-        border-radius: 14px;
-        background: var(--green-100);
-        display: grid;
-        place-items: center;
-        color: var(--green-900);
-        font-size: 20px;
-        font-weight: 900;
-      }
       .modal h2 {
         margin: 0;
         color: var(--green-950);
@@ -1123,6 +1107,47 @@
       }
       .modal-error.show {
         display: block;
+      }
+
+      .thank-you-modal {
+        width: min(470px, 100%);
+        padding: 32px;
+        text-align: left;
+      }
+      .thank-you-kicker {
+        margin: 0 0 10px !important;
+        color: var(--orange-700) !important;
+        font-size: 11px !important;
+        font-weight: 850;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .thank-you-modal h2 {
+        font-size: 28px;
+        line-height: 1.12;
+        margin: 0 0 12px;
+        color: var(--green-950);
+        letter-spacing: -0.035em;
+      }
+      .thank-you-modal .thank-you-copy {
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--muted);
+        margin: 0;
+      }
+      .thank-you-modal .thank-you-note {
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        font-size: 12px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+      .thank-you-modal .modal-actions {
+        margin-top: 24px;
+      }
+      .thank-you-modal .modal-actions .btn {
+        min-width: 120px;
       }
 
       footer {
@@ -1338,6 +1363,496 @@
           font-size: 9px;
         }
       }
+
+      /* Refined customer survey UI. Admin dashboard styles above are intentionally unchanged. */
+      .survey-view {
+        background: #fbfaf6;
+      }
+      .survey-view .survey-intro {
+        padding: 64px 0 46px;
+        border-bottom: 1px solid #e9e5da;
+        background: #fbfaf6;
+      }
+      .survey-view .survey-intro-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) 360px;
+        gap: 64px;
+        align-items: center;
+      }
+      .survey-view .intro-copy {
+        max-width: 760px;
+      }
+      .survey-view .survey-kicker {
+        display: block;
+        margin: 0 0 16px;
+        color: var(--green-800);
+        font-size: 12px;
+        font-weight: 850;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .survey-view .intro-copy h1 {
+        margin: 0;
+        color: var(--green-950);
+        font-size: clamp(40px, 5vw, 62px);
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+        max-width: 720px;
+      }
+      .survey-view .intro-copy > p {
+        max-width: 700px;
+        margin: 20px 0 0;
+        color: #596b63;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      .survey-view .survey-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        margin-top: 26px;
+        color: #56685f;
+        font-size: 12px;
+        font-weight: 750;
+      }
+      .survey-view .survey-meta span {
+        display: inline-flex;
+        align-items: center;
+      }
+      .survey-view .survey-meta span + span::before {
+        content: "";
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--orange-600);
+        margin: 0 12px;
+      }
+      .survey-view .intro-brand-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 24px;
+        border: 1px solid #e4e1d8;
+        border-top: 3px solid var(--orange-600);
+        background: #fff;
+        border-radius: 14px;
+      }
+      .survey-view .intro-brand-card img {
+        width: 88px;
+        height: 88px;
+        object-fit: contain;
+        flex: 0 0 auto;
+      }
+      .survey-view .intro-brand-card span {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--orange-700);
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .survey-view .intro-brand-card strong {
+        display: block;
+        color: var(--green-950);
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+      }
+
+      .survey-view .survey-section {
+        padding: 48px 0 76px;
+      }
+      .survey-view .survey-layout {
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 40px;
+        align-items: start;
+        max-width: 1040px;
+      }
+      .survey-view .survey-guide {
+        position: sticky;
+        top: 104px;
+      }
+      .survey-view .guide-card {
+        padding: 22px 0;
+        border-top: 2px solid var(--green-800);
+        border-bottom: 1px solid #dfddd4;
+      }
+      .survey-view .guide-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 12px;
+        color: var(--green-950);
+      }
+      .survey-view .guide-heading span {
+        font-size: 12px;
+        font-weight: 850;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .survey-view .guide-heading strong {
+        font-size: 13px;
+        color: var(--green-800);
+      }
+      .survey-view .progress-track {
+        height: 5px;
+        background: #e7e6df;
+        border-radius: 999px;
+      }
+      .survey-view .progress-bar {
+        height: 100%;
+        background: var(--orange-600);
+        border-radius: 999px;
+      }
+      .survey-view .guide-card > p {
+        margin: 14px 0 0;
+        color: #66756e;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      .survey-view .guide-points {
+        display: grid;
+        gap: 0;
+        margin-top: 24px;
+      }
+      .survey-view .guide-points > div {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+        padding: 14px 0;
+        border-top: 1px solid #e7e4db;
+      }
+      .survey-view .guide-points span {
+        color: var(--orange-700);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.06em;
+      }
+      .survey-view .guide-points p {
+        margin: 0;
+        color: #5f6f68;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+      .survey-view .guide-note {
+        margin: 16px 0 0;
+        color: #7b8781;
+        font-size: 11px;
+        line-height: 1.55;
+      }
+
+      .survey-view .survey-panel {
+        background: #fff;
+        border: 1px solid #e2dfd6;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .survey-view .survey-panel-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 28px 30px 24px;
+        border-bottom: 1px solid #e8e5dc;
+      }
+      .survey-view .panel-label {
+        display: block;
+        margin-bottom: 7px;
+        color: var(--orange-700);
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+      .survey-view .survey-panel-head h2 {
+        margin: 0;
+        color: var(--green-950);
+        font-size: 28px;
+        letter-spacing: -0.035em;
+      }
+      .survey-view .survey-panel-head p {
+        margin: 7px 0 0;
+        max-width: 560px;
+        color: #68756f;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .survey-view .panel-count {
+        white-space: nowrap;
+        color: #627069;
+        font-size: 11px;
+        font-weight: 800;
+        border: 1px solid #dedbd2;
+        border-radius: 999px;
+        padding: 7px 10px;
+        background: #fbfaf6;
+      }
+      .survey-view #feedbackForm {
+        display: block;
+        padding: 0 30px 30px;
+      }
+      .survey-view .question {
+        margin: 0;
+        padding: 28px 0;
+        border: 0;
+        border-top: 1px solid #ece9e1;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      .survey-view .question:first-child {
+        border-top: 0;
+      }
+      .survey-view .question:focus-within {
+        border-color: #ece9e1;
+        box-shadow: none;
+      }
+      .survey-view .q-head {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 12px;
+        align-items: start;
+        margin-bottom: 16px;
+      }
+      .survey-view .q-num {
+        width: auto;
+        height: auto;
+        min-width: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: var(--orange-700);
+        display: block;
+        font-size: 11px;
+        line-height: 1.6;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+      .survey-view .q-num::before {
+        content: "0";
+      }
+      .survey-view .question h3 {
+        margin: 0;
+        color: #23342d;
+        font-size: 15px;
+        line-height: 1.55;
+        font-weight: 760;
+        letter-spacing: -0.01em;
+      }
+      .survey-view .options {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+        margin-left: 46px;
+      }
+      .survey-view .options-short {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 520px;
+      }
+      .survey-view .option {
+        min-height: 46px;
+        padding: 10px 12px;
+        border: 1px solid #dddcd5;
+        border-radius: 9px;
+        background: #fff;
+        color: #415149;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 700;
+        transition:
+          border-color 0.15s ease,
+          background-color 0.15s ease,
+          color 0.15s ease;
+      }
+      .survey-view .option:hover {
+        border-color: #9db9a8;
+        background: #fbfdfb;
+      }
+      .survey-view .option:has(input:checked) {
+        border-color: var(--green-800);
+        background: #f1f7f3;
+        color: var(--green-950);
+        box-shadow: none;
+      }
+      .survey-view .option input {
+        width: 15px;
+        height: 15px;
+        margin: 0;
+        accent-color: var(--green-800);
+      }
+      .survey-view select,
+      .survey-view textarea {
+        margin-left: 46px;
+        width: calc(100% - 46px);
+        border: 1px solid #dcdad2;
+        border-radius: 9px;
+        background: #fff;
+        color: #26372f;
+        outline: none;
+        box-shadow: none;
+      }
+      .survey-view select {
+        min-height: 46px;
+        padding: 0 13px;
+      }
+      .survey-view textarea {
+        min-height: 104px;
+        margin-top: 9px;
+        padding: 13px;
+        resize: vertical;
+      }
+      .survey-view select:focus,
+      .survey-view textarea:focus {
+        border-color: var(--green-700);
+        box-shadow: 0 0 0 3px rgba(15, 107, 61, 0.08);
+      }
+      .survey-view .comment-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 20px 0 0 46px;
+        color: #34453d;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .survey-view .comment-label span {
+        color: #839087;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .survey-view .status {
+        margin: 0 0 18px;
+        border-radius: 9px;
+      }
+      .survey-view .survey-submit-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding-top: 24px;
+        border-top: 1px solid #e8e5dc;
+      }
+      .survey-view .survey-submit-row p {
+        max-width: 500px;
+        margin: 0;
+        color: #78857f;
+        font-size: 11px;
+        line-height: 1.55;
+      }
+      .survey-view .survey-submit-row .btn.orange {
+        min-width: 150px;
+        border-radius: 9px;
+        background: var(--green-800);
+        box-shadow: none;
+        padding: 12px 18px;
+        text-transform: none;
+      }
+      .survey-view .survey-submit-row .btn.orange:hover {
+        background: var(--green-900);
+      }
+
+      @media (max-width: 900px) {
+        .survey-view .survey-intro-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .survey-view .intro-brand-card {
+          max-width: 520px;
+        }
+        .survey-view .survey-layout {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .survey-view .survey-guide {
+          position: static;
+        }
+        .survey-view .guide-points {
+          display: none;
+        }
+        .survey-view .guide-card {
+          padding: 16px 0;
+        }
+        .survey-view .options {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 620px) {
+        .survey-view .survey-intro {
+          padding: 38px 0 32px;
+        }
+        .survey-view .intro-copy h1 {
+          font-size: 38px;
+        }
+        .survey-view .intro-copy > p {
+          font-size: 15px;
+          line-height: 1.65;
+        }
+        .survey-view .intro-brand-card {
+          padding: 18px;
+          gap: 14px;
+        }
+        .survey-view .intro-brand-card img {
+          width: 68px;
+          height: 68px;
+        }
+        .survey-view .intro-brand-card strong {
+          font-size: 15px;
+        }
+        .survey-view .survey-section {
+          padding: 28px 0 52px;
+        }
+        .survey-view .survey-panel {
+          border-radius: 12px;
+        }
+        .survey-view .survey-panel-head {
+          padding: 22px 18px 18px;
+          display: block;
+        }
+        .survey-view .panel-count {
+          display: inline-block;
+          margin-top: 14px;
+        }
+        .survey-view #feedbackForm {
+          padding: 0 18px 22px;
+        }
+        .survey-view .question {
+          padding: 24px 0;
+        }
+        .survey-view .q-head {
+          grid-template-columns: 28px 1fr;
+          gap: 8px;
+        }
+        .survey-view .options,
+        .survey-view .options-short {
+          grid-template-columns: 1fr;
+          margin-left: 36px;
+          max-width: none;
+        }
+        .survey-view select,
+        .survey-view textarea {
+          margin-left: 36px;
+          width: calc(100% - 36px);
+        }
+        .survey-view .comment-label {
+          margin-left: 36px;
+        }
+        .survey-view .survey-submit-row {
+          align-items: stretch;
+          flex-direction: column;
+        }
+        .survey-view .survey-submit-row .btn.orange {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1364,10 +1879,7 @@
             >
               Customer Survey
             </button>
-            <button class="btn ghost" id="adminLoginBtn">
-              <span aria-hidden="true">🔒</span
-              ><span class="mobile-hide">Admin Login</span>
-            </button>
+            <button class="btn ghost" id="adminLoginBtn">Admin Login</button>
             <button class="btn danger" id="logoutBtn" style="display: none">
               Logout
             </button>
@@ -1376,93 +1888,84 @@
       </header>
 
       <div class="survey-view">
-        <section class="hero">
-          <div class="shell hero-grid">
-            <div>
-              <div class="eyebrow">
-                <span class="dot"></span> Sambethel Taste Customer Feedback
-              </div>
-              <h1>Your opinion helps us bake <em>better.</em></h1>
+        <section class="survey-intro">
+          <div class="shell survey-intro-grid">
+            <div class="intro-copy">
+              <span class="survey-kicker"
+                >Sambethel Taste customer feedback</span
+              >
+              <h1>Help us make every loaf better.</h1>
               <p>
-                Tell us what you think about the quality, taste, freshness, and
-                value of Sambethel Taste bread. Your feedback directly guides
-                the improvements we make.
+                Share a quick review of the Sambethel Taste bread you most
+                recently bought or tasted. Your answers help us improve the
+                product based on what customers actually experience.
               </p>
-              <div class="trust-row">
-                <div class="trust-item">
-                  <span class="check">✓</span> 5 quick questions
-                </div>
-                <div class="trust-item">
-                  <span class="check">✓</span> No account required
-                </div>
-                <div class="trust-item">
-                  <span class="check">✓</span> Feedback used for product
-                  improvement
-                </div>
+              <div class="survey-meta" aria-label="Survey information">
+                <span>5 questions</span>
+                <span>About 1 minute</span>
+                <span>No account required</span>
               </div>
             </div>
-            <div class="hero-visual" aria-hidden="true">
-              <div class="visual-label">Sambethel Taste</div>
-              <div class="bread-shape"></div>
-              <div class="visual-copy">
-                <strong>Fresh feedback. Smarter decisions.</strong>
-                <span
-                  >Every response helps us understand what customers value
-                  most.</span
-                >
+
+            <div class="intro-brand-card">
+              <img
+                src="https://res.cloudinary.com/deoqw88yb/image/upload/v1771180076/Copilot_20260215_192641_ziwjlm.png"
+                alt="Sambethel Taste"
+              />
+              <div>
+                <span>Customer experience</span>
+                <strong>Your feedback guides what we improve next.</strong>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="form-section">
-          <div class="shell form-wrap">
-            <aside class="side-card">
-              <h2>Share your experience</h2>
-              <p>
-                Please answer based on the Sambethel Taste bread you most
-                recently purchased or tasted.
+        <section class="survey-section">
+          <div class="shell survey-layout">
+            <aside class="survey-guide" aria-label="Survey progress">
+              <div class="guide-card">
+                <div class="guide-heading">
+                  <span>Progress</span>
+                  <strong id="progressText">0%</strong>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p>
+                  Answer all five questions, then submit your feedback once.
+                </p>
+                <div class="guide-points">
+                  <div>
+                    <span>01</span>
+                    <p>Rate the bread based on your latest experience.</p>
+                  </div>
+                  <div>
+                    <span>02</span>
+                    <p>Tell us where the product could improve.</p>
+                  </div>
+                  <div>
+                    <span>03</span>
+                    <p>Add a comment only if you want to give more detail.</p>
+                  </div>
+                </div>
+              </div>
+              <p class="guide-note">
+                Responses are used by Sambethel Taste for product and
+                customer-experience improvement.
               </p>
-              <div class="progress-label">
-                <span>Survey progress</span><span id="progressText">0%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-bar" id="progressBar"></div>
-              </div>
-              <div class="side-list">
-                <div>
-                  <span class="mini-icon">1</span
-                  ><span
-                    >Rate the product honestly so we can identify what is
-                    working.</span
-                  >
-                </div>
-                <div>
-                  <span class="mini-icon">2</span
-                  ><span
-                    >Choose the improvement that would matter most to you.</span
-                  >
-                </div>
-                <div>
-                  <span class="mini-icon">3</span
-                  ><span
-                    >Add an optional comment if you want to explain your
-                    answer.</span
-                  >
-                </div>
-              </div>
             </aside>
 
-            <div class="form-card">
-              <div class="form-head">
+            <div class="survey-panel">
+              <div class="survey-panel-head">
                 <div>
-                  <h2>Bread Feedback Survey</h2>
+                  <span class="panel-label">Bread feedback</span>
+                  <h2>Tell us about your experience</h2>
                   <p>
-                    Your responses are combined with other customer feedback for
-                    analysis.
+                    Please answer based on your most recent Sambethel Taste
+                    bread purchase or tasting.
                   </p>
                 </div>
-                <span class="pill">5 questions</span>
+                <span class="panel-count">5 questions</span>
               </div>
 
               <form id="feedbackForm">
@@ -1476,23 +1979,23 @@
                   <div class="options">
                     <label class="option"
                       ><input required type="radio" name="quality" value="5" />
-                      Excellent</label
+                      <span>Excellent</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="quality" value="4" />
-                      Good</label
+                      <span>Good</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="quality" value="3" />
-                      Average</label
+                      <span>Average</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="quality" value="2" />
-                      Poor</label
+                      <span>Poor</span></label
                     >
                     <label class="option"
-                      ><input type="radio" name="quality" value="1" /> Very
-                      Poor</label
+                      ><input type="radio" name="quality" value="1" />
+                      <span>Very Poor</span></label
                     >
                   </div>
                 </div>
@@ -1505,23 +2008,23 @@
                   <div class="options">
                     <label class="option"
                       ><input required type="radio" name="taste" value="5" />
-                      Very Satisfied</label
+                      <span>Very Satisfied</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="taste" value="4" />
-                      Satisfied</label
+                      <span>Satisfied</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="taste" value="3" />
-                      Neutral</label
+                      <span>Neutral</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="taste" value="2" />
-                      Dissatisfied</label
+                      <span>Dissatisfied</span></label
                     >
                     <label class="option"
-                      ><input type="radio" name="taste" value="1" /> Very
-                      Dissatisfied</label
+                      ><input type="radio" name="taste" value="1" />
+                      <span>Very Dissatisfied</span></label
                     >
                   </div>
                 </div>
@@ -1542,23 +2045,23 @@
                         name="freshness"
                         value="5"
                       />
-                      Very Satisfied</label
+                      <span>Very Satisfied</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="freshness" value="4" />
-                      Satisfied</label
+                      <span>Satisfied</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="freshness" value="3" />
-                      Neutral</label
+                      <span>Neutral</span></label
                     >
                     <label class="option"
                       ><input type="radio" name="freshness" value="2" />
-                      Dissatisfied</label
+                      <span>Dissatisfied</span></label
                     >
                     <label class="option"
-                      ><input type="radio" name="freshness" value="1" /> Very
-                      Dissatisfied</label
+                      ><input type="radio" name="freshness" value="1" />
+                      <span>Very Dissatisfied</span></label
                     >
                   </div>
                 </div>
@@ -1571,17 +2074,18 @@
                       money?
                     </h3>
                   </div>
-                  <div class="options">
+                  <div class="options options-short">
                     <label class="option"
                       ><input required type="radio" name="value" value="Yes" />
-                      Yes</label
+                      <span>Yes</span></label
                     >
                     <label class="option"
-                      ><input type="radio" name="value" value="No" /> No</label
+                      ><input type="radio" name="value" value="No" />
+                      <span>No</span></label
                     >
                     <label class="option"
-                      ><input type="radio" name="value" value="Not Sure" /> Not
-                      Sure</label
+                      ><input type="radio" name="value" value="Not Sure" />
+                      <span>Not Sure</span></label
                     >
                   </div>
                 </div>
@@ -1593,7 +2097,11 @@
                       What would you most like us to improve about our bread?
                     </h3>
                   </div>
-                  <select name="improvement" required>
+                  <select
+                    name="improvement"
+                    required
+                    aria-label="Choose an improvement"
+                  >
                     <option value="" disabled selected>
                       Select one improvement
                     </option>
@@ -1607,20 +2115,25 @@
                     <option>No improvement needed</option>
                     <option>Other</option>
                   </select>
+                  <label class="comment-label" for="feedbackComment"
+                    >Anything else you would like us to know?
+                    <span>Optional</span></label
+                  >
                   <textarea
+                    id="feedbackComment"
                     name="comment"
-                    placeholder="Optional: tell us more about your experience or suggestion"
+                    placeholder="Add a short comment or suggestion"
                   ></textarea>
                 </div>
 
                 <div id="formStatus" class="status"></div>
-                <div class="submit-row">
-                  <div class="privacy-copy">
-                    Your response is used by Sambethel Taste to understand
-                    customer experience and improve the product.
-                  </div>
+                <div class="survey-submit-row">
+                  <p>
+                    By submitting, you agree that Sambethel Taste may use this
+                    feedback to improve its products and customer experience.
+                  </p>
                   <button class="btn orange" type="submit" id="submitBtn">
-                    Submit Feedback
+                    Submit feedback
                   </button>
                 </div>
               </form>
@@ -1797,19 +2310,18 @@
       <div class="modal">
         <div class="modal-head">
           <div>
-            <div class="lock-icon">🔒</div>
-            <h2 id="loginTitle" style="margin-top: 14px">Admin access</h2>
+            <h2 id="loginTitle">Admin access</h2>
             <p>
               The analysis dashboard is restricted to authorized Sambethel Taste
               staff.
             </p>
           </div>
           <button
-            class="btn ghost icon-btn"
+            class="btn ghost"
             id="closeLoginBtn"
-            aria-label="Close"
+            aria-label="Close admin login"
           >
-            ×
+            Close
           </button>
         </div>
         <form id="adminLoginForm">
@@ -1835,6 +2347,32 @@
       </div>
     </div>
 
+    <div
+      class="modal-backdrop"
+      id="thankYouModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="thankYouTitle"
+    >
+      <div class="modal thank-you-modal">
+        <p class="thank-you-kicker">Feedback received</p>
+        <h2 id="thankYouTitle">Thank you for sharing your feedback.</h2>
+        <p class="thank-you-copy">
+          We appreciate you taking the time to tell us about your Sambethel
+          Taste bread experience. Your response will help us improve our
+          products and serve you better.
+        </p>
+        <p class="thank-you-note">
+          Your feedback has been submitted successfully.
+        </p>
+        <div class="modal-actions">
+          <button type="button" class="btn primary" id="closeThankYouBtn">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
       const $ = (id) => document.getElementById(id);
       const form = $("feedbackForm");
@@ -1848,6 +2386,8 @@
       const loginSubmitBtn = $("loginSubmitBtn");
       const dashboardLoading = $("dashboardLoading");
       const dashboardContent = $("dashboardContent");
+      const thankYouModal = $("thankYouModal");
+      const closeThankYouBtn = $("closeThankYouBtn");
 
       const qualityLabels = {
         5: "Excellent",
@@ -1927,14 +2467,10 @@
             throw new Error(body.error || "Could not submit feedback.");
           form.reset();
           updateProgress();
-          setStatus(
-            "Thank you. Your feedback has been recorded successfully.",
-            "success",
-          );
-          window.scrollTo({
-            top: document.querySelector(".form-card").offsetTop - 90,
-            behavior: "smooth",
-          });
+          formStatus.className = "status";
+          formStatus.textContent = "";
+          thankYouModal.classList.add("open");
+          setTimeout(() => closeThankYouBtn.focus(), 80);
         } catch (err) {
           setStatus(
             err.message || "Could not submit feedback. Please try again.",
@@ -1956,6 +2492,9 @@
       function closeLogin() {
         loginModal.classList.remove("open");
       }
+      function closeThankYou() {
+        thankYouModal.classList.remove("open");
+      }
 
       $("adminLoginBtn").addEventListener("click", openLogin);
       $("closeLoginBtn").addEventListener("click", closeLogin);
@@ -1963,8 +2502,15 @@
       loginModal.addEventListener("click", (e) => {
         if (e.target === loginModal) closeLogin();
       });
+      closeThankYouBtn.addEventListener("click", closeThankYou);
+      thankYouModal.addEventListener("click", (e) => {
+        if (e.target === thankYouModal) closeThankYou();
+      });
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeLogin();
+        if (e.key === "Escape") {
+          closeLogin();
+          closeThankYou();
+        }
       });
 
       $("adminLoginForm").addEventListener("submit", async (e) => {
