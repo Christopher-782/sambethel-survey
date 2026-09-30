@@ -1,0 +1,2227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f6b3d" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/deoqw88yb/image/upload/v1771180076/Copilot_20260215_192641_ziwjlm.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://res.cloudinary.com/deoqw88yb/image/upload/v1771180076/Copilot_20260215_192641_ziwjlm.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://res.cloudinary.com/deoqw88yb/image/upload/v1771180076/Copilot_20260215_192641_ziwjlm.png"
+    />
+    <title>Sambethel Taste | Customer Feedback</title>
+    <meta
+      name="description"
+      content="Sambethel Taste customer feedback and private business analytics."
+    />
+    <style>
+      :root {
+        --green-950: #0a3322;
+        --green-900: #0d4a2e;
+        --green-800: #0f6b3d;
+        --green-700: #16804a;
+        --green-100: #e8f5ed;
+        --green-50: #f3faf6;
+        --orange-700: #d96a10;
+        --orange-600: #ef7d1a;
+        --orange-500: #f59a3a;
+        --orange-100: #fff0df;
+        --orange-50: #fff8ef;
+        --ink: #173129;
+        --muted: #62736c;
+        --line: #dce7e1;
+        --surface: #ffffff;
+        --canvas: #f6f8f6;
+        --danger: #b33838;
+        --danger-bg: #fff0f0;
+        --shadow-sm: 0 4px 16px rgba(20, 59, 42, 0.07);
+        --shadow: 0 18px 50px rgba(20, 59, 42, 0.1);
+        --radius: 22px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at 92% 5%,
+            rgba(245, 154, 58, 0.13),
+            transparent 26%
+          ),
+          radial-gradient(
+            circle at 8% 8%,
+            rgba(15, 107, 61, 0.08),
+            transparent 30%
+          ),
+          var(--canvas);
+        min-height: 100vh;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+      button {
+        cursor: pointer;
+      }
+      .app {
+        min-height: 100vh;
+      }
+      .shell {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(220, 231, 225, 0.8);
+        position: sticky;
+        top: 0;
+        z-index: 30;
+      }
+      .topbar .shell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: 0 8px 18px rgba(15, 107, 61, 0.12);
+        overflow: hidden;
+        flex: 0 0 auto;
+      }
+      .brand-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 5px;
+        display: block;
+      }
+      .brand-copy strong {
+        display: block;
+        font-size: 17px;
+        letter-spacing: -0.02em;
+        color: var(--green-950);
+      }
+      .brand-copy span {
+        display: block;
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+      .btn {
+        border: 0;
+        border-radius: 12px;
+        padding: 11px 15px;
+        font-weight: 800;
+        transition: 0.18s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .btn.primary {
+        background: var(--green-800);
+        color: white;
+        box-shadow: 0 8px 18px rgba(15, 107, 61, 0.18);
+      }
+      .btn.orange {
+        background: var(--orange-600);
+        color: white;
+        box-shadow: 0 8px 18px rgba(239, 125, 26, 0.18);
+      }
+      .btn.ghost {
+        background: white;
+        color: var(--green-900);
+        border: 1px solid var(--line);
+      }
+      .btn.soft {
+        background: var(--green-100);
+        color: var(--green-900);
+      }
+      .btn.danger {
+        background: var(--danger-bg);
+        color: var(--danger);
+      }
+      .icon-btn {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+      }
+
+      .survey-view {
+        display: block;
+      }
+      .admin-view {
+        display: none;
+        padding: 34px 0 54px;
+      }
+      body.admin-mode .survey-view {
+        display: none;
+      }
+      body.admin-mode .admin-view {
+        display: block;
+      }
+
+      .hero {
+        padding: 62px 0 34px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 42px;
+        align-items: center;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid #cfe3d7;
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--green-800);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--orange-600);
+      }
+      .hero h1 {
+        font-size: clamp(38px, 5.4vw, 68px);
+        line-height: 0.98;
+        letter-spacing: -0.052em;
+        margin: 18px 0;
+        color: var(--green-950);
+        max-width: 760px;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--orange-600);
+      }
+      .hero p {
+        font-size: 18px;
+        line-height: 1.65;
+        color: var(--muted);
+        max-width: 720px;
+        margin: 0 0 20px;
+      }
+      .trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        color: var(--green-900);
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .check {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--green-100);
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+        color: var(--green-800);
+      }
+      .hero-visual {
+        min-height: 330px;
+        border-radius: 32px;
+        background: linear-gradient(145deg, var(--green-950), var(--green-700));
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 30px;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .hero-visual::before {
+        content: "";
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: var(--orange-500);
+        right: -110px;
+        top: -120px;
+        opacity: 0.95;
+      }
+      .hero-visual::after {
+        content: "";
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        border: 2px solid rgba(255, 255, 255, 0.14);
+        border-radius: 50%;
+        left: -90px;
+        bottom: -100px;
+      }
+      .visual-label {
+        position: relative;
+        z-index: 1;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #bfe5cf;
+        font-weight: 800;
+      }
+      .visual-copy {
+        position: relative;
+        z-index: 1;
+      }
+      .visual-copy strong {
+        font-size: 34px;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        display: block;
+        max-width: 350px;
+      }
+      .visual-copy span {
+        display: block;
+        margin-top: 12px;
+        color: #d9eee2;
+        line-height: 1.5;
+        max-width: 350px;
+      }
+      .bread-shape {
+        position: absolute;
+        width: 154px;
+        height: 112px;
+        border-radius: 52% 52% 34% 34%;
+        background: linear-gradient(145deg, #ffbd72, #ef7d1a);
+        right: 36px;
+        top: 100px;
+        transform: rotate(-7deg);
+        box-shadow:
+          inset -14px -16px 0 rgba(182, 83, 10, 0.15),
+          0 18px 40px rgba(0, 0, 0, 0.18);
+      }
+      .bread-shape::before,
+      .bread-shape::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 54px;
+        background: rgba(255, 255, 255, 0.48);
+        border-radius: 999px;
+        top: 18px;
+        transform: rotate(24deg);
+      }
+      .bread-shape::before {
+        left: 52px;
+      }
+      .bread-shape::after {
+        left: 86px;
+      }
+
+      .form-section {
+        padding: 10px 0 70px;
+      }
+      .form-wrap {
+        display: grid;
+        grid-template-columns: 290px 1fr;
+        gap: 24px;
+        align-items: start;
+      }
+      .side-card,
+      .form-card,
+      .report-card,
+      .kpi,
+      .insight-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+      }
+      .side-card {
+        border-radius: var(--radius);
+        padding: 22px;
+        position: sticky;
+        top: 98px;
+      }
+      .side-card h2 {
+        font-size: 19px;
+        margin: 0 0 8px;
+        color: var(--green-950);
+        letter-spacing: -0.02em;
+      }
+      .side-card p {
+        font-size: 13px;
+        line-height: 1.55;
+        color: var(--muted);
+        margin: 0 0 20px;
+      }
+      .progress-label {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--green-900);
+        margin-bottom: 8px;
+      }
+      .progress-track {
+        height: 8px;
+        background: #edf3ef;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .progress-bar {
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, var(--green-800), var(--orange-500));
+        border-radius: 999px;
+        transition: 0.25s ease;
+      }
+      .side-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 22px;
+      }
+      .side-list div {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 12px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+      .mini-icon {
+        min-width: 28px;
+        width: 28px;
+        height: 28px;
+        border-radius: 9px;
+        background: var(--orange-100);
+        color: var(--orange-700);
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+      }
+
+      .form-card {
+        border-radius: 28px;
+        padding: 28px;
+      }
+      .form-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: flex-start;
+        padding-bottom: 22px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 22px;
+      }
+      .form-head h2 {
+        font-size: 27px;
+        letter-spacing: -0.035em;
+        margin: 0;
+        color: var(--green-950);
+      }
+      .form-head p {
+        margin: 7px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .pill {
+        background: var(--green-100);
+        color: var(--green-900);
+        border-radius: 999px;
+        padding: 8px 11px;
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      form {
+        display: grid;
+        gap: 18px;
+      }
+      .question {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px;
+        transition: 0.2s ease;
+        background: #fff;
+      }
+      .question:focus-within {
+        border-color: #afd3bd;
+        box-shadow: 0 0 0 4px rgba(15, 107, 61, 0.06);
+      }
+      .q-head {
+        display: flex;
+        gap: 11px;
+        align-items: flex-start;
+        margin-bottom: 14px;
+      }
+      .q-num {
+        min-width: 28px;
+        width: 28px;
+        height: 28px;
+        border-radius: 9px;
+        background: var(--green-800);
+        color: white;
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+        font-weight: 900;
+      }
+      .question h3 {
+        font-size: 15px;
+        line-height: 1.45;
+        margin: 3px 0 0;
+        color: var(--ink);
+      }
+      .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+        gap: 9px;
+      }
+      .option {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 11px 12px;
+        background: #fbfcfb;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 650;
+        transition: 0.15s ease;
+      }
+      .option:hover {
+        border-color: #b9d5c5;
+        background: var(--green-50);
+      }
+      .option:has(input:checked) {
+        border-color: var(--green-700);
+        background: var(--green-100);
+        color: var(--green-950);
+        box-shadow: inset 0 0 0 1px var(--green-700);
+      }
+      .option input {
+        accent-color: var(--green-800);
+      }
+      select,
+      textarea,
+      .modal input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px 13px;
+        background: #fbfcfb;
+        color: var(--ink);
+        outline: none;
+        transition: 0.15s ease;
+      }
+      select:focus,
+      textarea:focus,
+      .modal input:focus {
+        border-color: var(--green-700);
+        box-shadow: 0 0 0 4px rgba(15, 107, 61, 0.07);
+      }
+      textarea {
+        min-height: 92px;
+        resize: vertical;
+        margin-top: 10px;
+      }
+      .submit-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+        padding-top: 4px;
+      }
+      .privacy-copy {
+        font-size: 12px;
+        color: var(--muted);
+        max-width: 430px;
+        line-height: 1.45;
+      }
+      .status {
+        display: none;
+        margin-top: 2px;
+        border-radius: 12px;
+        padding: 12px 14px;
+        font-size: 13px;
+        font-weight: 750;
+      }
+      .status.show {
+        display: block;
+      }
+      .status.success {
+        background: var(--green-100);
+        color: var(--green-900);
+        border: 1px solid #bfe1cc;
+      }
+      .status.error {
+        background: var(--danger-bg);
+        color: var(--danger);
+        border: 1px solid #f0caca;
+      }
+
+      .admin-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 24px;
+      }
+      .admin-top h1 {
+        margin: 0;
+        color: var(--green-950);
+        font-size: 34px;
+        letter-spacing: -0.04em;
+      }
+      .admin-top p {
+        margin: 7px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .admin-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .report-banner {
+        border-radius: 25px;
+        background: linear-gradient(120deg, var(--green-950), var(--green-700));
+        color: #fff;
+        padding: 24px 26px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 18px;
+        box-shadow: var(--shadow);
+      }
+      .report-banner .label {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 11px;
+        color: #bfe5cf;
+        font-weight: 800;
+      }
+      .report-banner h2 {
+        margin: 7px 0 4px;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+      }
+      .report-banner p {
+        margin: 0;
+        color: #d9eee2;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .score-ring {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        position: relative;
+        background: conic-gradient(
+          var(--orange-500) calc(var(--score) * 1%),
+          rgba(255, 255, 255, 0.15) 0
+        );
+      }
+      .score-ring::after {
+        content: "";
+        position: absolute;
+        inset: 9px;
+        border-radius: 50%;
+        background: var(--green-950);
+      }
+      .score-ring strong {
+        position: relative;
+        z-index: 1;
+        font-size: 26px;
+        line-height: 1;
+      }
+      .score-ring span {
+        position: relative;
+        z-index: 1;
+        font-size: 10px;
+        color: #cde8d8;
+        margin-top: 2px;
+      }
+      .score-ring > div {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .kpi {
+        border-radius: 18px;
+        padding: 17px;
+        position: relative;
+        overflow: hidden;
+      }
+      .kpi::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(--green-700);
+      }
+      .kpi.orange::before {
+        background: var(--orange-600);
+      }
+      .kpi span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 750;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+      .kpi strong {
+        font-size: 27px;
+        letter-spacing: -0.035em;
+        color: var(--green-950);
+      }
+      .kpi small {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 4px;
+      }
+
+      .report-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+      .report-card {
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .section-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .section-head h3 {
+        margin: 0;
+        font-size: 17px;
+        letter-spacing: -0.02em;
+        color: var(--green-950);
+      }
+      .section-head p {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .section-badge {
+        border-radius: 999px;
+        padding: 6px 9px;
+        background: var(--orange-100);
+        color: var(--orange-700);
+        font-size: 10px;
+        font-weight: 850;
+        white-space: nowrap;
+      }
+      .insight-list {
+        display: grid;
+        gap: 10px;
+      }
+      .insight-card {
+        border-radius: 14px;
+        padding: 13px 14px;
+        box-shadow: none;
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 11px;
+        align-items: start;
+      }
+      .insight-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        background: var(--green-100);
+        color: var(--green-800);
+        font-weight: 900;
+      }
+      .insight-icon.orange {
+        background: var(--orange-100);
+        color: var(--orange-700);
+      }
+      .insight-card strong {
+        display: block;
+        font-size: 13px;
+        color: var(--green-950);
+        margin-bottom: 3px;
+      }
+      .insight-card span {
+        display: block;
+        font-size: 12px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .metric-list {
+        display: grid;
+        gap: 15px;
+      }
+      .metric-row {
+        display: grid;
+        grid-template-columns: 132px 1fr 52px;
+        gap: 11px;
+        align-items: center;
+      }
+      .metric-label {
+        font-size: 12px;
+        color: var(--ink);
+        font-weight: 750;
+      }
+      .metric-track {
+        height: 10px;
+        border-radius: 999px;
+        background: #ecf2ee;
+        overflow: hidden;
+      }
+      .metric-fill {
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--green-800), var(--green-700));
+        transition: width 0.4s ease;
+      }
+      .metric-fill.orange {
+        background: linear-gradient(
+          90deg,
+          var(--orange-600),
+          var(--orange-500)
+        );
+      }
+      .metric-value {
+        text-align: right;
+        font-size: 12px;
+        font-weight: 850;
+        color: var(--green-950);
+      }
+
+      .priority-list {
+        display: grid;
+        gap: 12px;
+      }
+      .priority-row {
+        display: grid;
+        grid-template-columns: 28px 150px 1fr 52px;
+        gap: 10px;
+        align-items: center;
+      }
+      .rank {
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        font-size: 11px;
+        font-weight: 900;
+        background: var(--orange-100);
+        color: var(--orange-700);
+      }
+      .priority-label {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .bar-track {
+        height: 9px;
+        background: #edf2ef;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .bar-fill {
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--orange-600),
+          var(--orange-500)
+        );
+        border-radius: 999px;
+      }
+      .bar-value {
+        text-align: right;
+        font-size: 11px;
+        font-weight: 800;
+        color: var(--muted);
+      }
+
+      .value-segment {
+        height: 20px;
+        display: flex;
+        border-radius: 999px;
+        overflow: hidden;
+        background: #edf2ef;
+        margin: 14px 0 12px;
+      }
+      .value-segment div {
+        height: 100%;
+      }
+      .seg-yes {
+        background: var(--green-700);
+      }
+      .seg-no {
+        background: var(--orange-600);
+      }
+      .seg-unsure {
+        background: #9daaa4;
+      }
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .legend span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .legend i {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .table-wrap {
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+        min-width: 850px;
+      }
+      th,
+      td {
+        padding: 11px 10px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--green-900);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        background: var(--green-50);
+        position: sticky;
+        top: 0;
+      }
+      tbody tr:hover {
+        background: #fbfdfb;
+      }
+      .comment-cell {
+        max-width: 260px;
+        white-space: normal;
+        line-height: 1.4;
+      }
+      .empty {
+        padding: 28px;
+        text-align: center;
+        color: var(--muted);
+        border: 1px dashed var(--line);
+        border-radius: 14px;
+        background: #fbfcfb;
+        font-size: 13px;
+      }
+      .report-foot {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 16px;
+        padding: 0 2px;
+      }
+      .loading-card {
+        display: grid;
+        place-items: center;
+        min-height: 320px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .spinner {
+        width: 30px;
+        height: 30px;
+        border: 3px solid #dce9e1;
+        border-top-color: var(--green-800);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto 12px;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(9, 31, 21, 0.56);
+        backdrop-filter: blur(5px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        z-index: 100;
+      }
+      .modal-backdrop.open {
+        display: flex;
+      }
+      .modal {
+        width: min(440px, 100%);
+        background: white;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        box-shadow: 0 30px 80px rgba(4, 28, 17, 0.28);
+        padding: 24px;
+      }
+      .modal-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .lock-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        background: var(--green-100);
+        display: grid;
+        place-items: center;
+        color: var(--green-900);
+        font-size: 20px;
+        font-weight: 900;
+      }
+      .modal h2 {
+        margin: 0;
+        color: var(--green-950);
+        font-size: 22px;
+        letter-spacing: -0.03em;
+      }
+      .modal p {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .modal label {
+        display: block;
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--ink);
+        margin-bottom: 7px;
+      }
+      .modal-actions {
+        display: flex;
+        gap: 9px;
+        justify-content: flex-end;
+        margin-top: 16px;
+      }
+      .modal-error {
+        display: none;
+        background: var(--danger-bg);
+        border: 1px solid #efc6c6;
+        color: var(--danger);
+        border-radius: 10px;
+        padding: 10px 11px;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+      .modal-error.show {
+        display: block;
+      }
+
+      footer {
+        padding: 26px 0 32px;
+        color: #788a81;
+        font-size: 11px;
+        text-align: center;
+        border-top: 1px solid rgba(220, 231, 225, 0.8);
+      }
+
+      @media (max-width: 1000px) {
+        .kpi-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .report-grid {
+          grid-template-columns: 1fr;
+        }
+        .form-wrap {
+          grid-template-columns: 240px 1fr;
+        }
+      }
+      @media (max-width: 780px) {
+        .shell {
+          width: min(100% - 24px, 1180px);
+        }
+        .topbar {
+          height: auto;
+          padding: 12px 0;
+        }
+        .brand-copy span {
+          display: none;
+        }
+        .hero {
+          padding-top: 38px;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-visual {
+          min-height: 270px;
+        }
+        .form-wrap {
+          grid-template-columns: 1fr;
+        }
+        .side-card {
+          position: static;
+        }
+        .side-list {
+          display: none;
+        }
+        .form-card {
+          padding: 20px;
+        }
+        .form-head {
+          flex-direction: column;
+        }
+        .pill {
+          align-self: flex-start;
+        }
+        .kpi-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .admin-top {
+          flex-direction: column;
+        }
+        .admin-actions {
+          justify-content: flex-start;
+        }
+        .report-banner {
+          grid-template-columns: 1fr;
+        }
+        .score-ring {
+          width: 84px;
+          height: 84px;
+        }
+        .priority-row {
+          grid-template-columns: 28px 120px 1fr 46px;
+        }
+      }
+      @media (max-width: 520px) {
+        .brand-mark {
+          width: 42px;
+          height: 42px;
+        }
+        .brand-copy strong {
+          font-size: 15px;
+        }
+        .nav-actions .btn span.mobile-hide {
+          display: none;
+        }
+        .nav-actions .btn {
+          padding: 10px 12px;
+        }
+        .hero h1 {
+          font-size: 42px;
+        }
+        .hero p {
+          font-size: 16px;
+        }
+        .hero-visual {
+          min-height: 240px;
+          padding: 22px;
+        }
+        .bread-shape {
+          width: 120px;
+          height: 88px;
+          right: 20px;
+          top: 82px;
+        }
+        .visual-copy strong {
+          font-size: 29px;
+        }
+        .form-card {
+          padding: 16px;
+          border-radius: 20px;
+        }
+        .question {
+          padding: 16px;
+        }
+        .options {
+          grid-template-columns: 1fr;
+        }
+        .submit-row {
+          align-items: stretch;
+        }
+        .submit-row .btn {
+          width: 100%;
+        }
+        .kpi-grid {
+          grid-template-columns: 1fr;
+        }
+        .admin-top h1 {
+          font-size: 28px;
+        }
+        .report-banner {
+          padding: 20px;
+        }
+        .metric-row {
+          grid-template-columns: 104px 1fr 44px;
+        }
+        .priority-row {
+          grid-template-columns: 26px 1fr 46px;
+        }
+        .priority-row .bar-track {
+          grid-column: 2/4;
+        }
+        .priority-label {
+          font-size: 12px;
+        }
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 12mm;
+        }
+        body {
+          background: #fff;
+          color: #111;
+        }
+        .topbar,
+        .admin-actions,
+        .modal-backdrop,
+        footer {
+          display: none !important;
+        }
+        .admin-view {
+          display: block !important;
+          padding: 0;
+        }
+        .survey-view {
+          display: none !important;
+        }
+        .shell {
+          width: 100%;
+          max-width: none;
+        }
+        .report-banner,
+        .report-card,
+        .kpi,
+        .insight-card {
+          box-shadow: none;
+          break-inside: avoid;
+        }
+        .report-banner {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .kpi-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+        .report-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .report-card {
+          padding: 14px;
+        }
+        .kpi {
+          padding: 12px;
+        }
+        .table-wrap {
+          overflow: visible;
+        }
+        .table-wrap table {
+          min-width: 0;
+          font-size: 9px;
+        }
+        th,
+        td {
+          padding: 6px 5px;
+        }
+        .report-foot {
+          font-size: 9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="shell">
+          <a class="brand" href="#" id="brandHome">
+            <div class="brand-mark">
+              <img
+                src="https://res.cloudinary.com/deoqw88yb/image/upload/v1771180076/Copilot_20260215_192641_ziwjlm.png"
+                alt="Sambethel Taste logo"
+              />
+            </div>
+            <div class="brand-copy">
+              <strong>Sambethel Taste</strong
+              ><span>Fresh bread. Better every day.</span>
+            </div>
+          </a>
+          <div class="nav-actions">
+            <button
+              class="btn ghost"
+              id="customerViewBtn"
+              style="display: none"
+            >
+              Customer Survey
+            </button>
+            <button class="btn ghost" id="adminLoginBtn">
+              <span aria-hidden="true">🔒</span
+              ><span class="mobile-hide">Admin Login</span>
+            </button>
+            <button class="btn danger" id="logoutBtn" style="display: none">
+              Logout
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="survey-view">
+        <section class="hero">
+          <div class="shell hero-grid">
+            <div>
+              <div class="eyebrow">
+                <span class="dot"></span> Sambethel Taste Customer Feedback
+              </div>
+              <h1>Your opinion helps us bake <em>better.</em></h1>
+              <p>
+                Tell us what you think about the quality, taste, freshness, and
+                value of Sambethel Taste bread. Your feedback directly guides
+                the improvements we make.
+              </p>
+              <div class="trust-row">
+                <div class="trust-item">
+                  <span class="check">✓</span> 5 quick questions
+                </div>
+                <div class="trust-item">
+                  <span class="check">✓</span> No account required
+                </div>
+                <div class="trust-item">
+                  <span class="check">✓</span> Feedback used for product
+                  improvement
+                </div>
+              </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="visual-label">Sambethel Taste</div>
+              <div class="bread-shape"></div>
+              <div class="visual-copy">
+                <strong>Fresh feedback. Smarter decisions.</strong>
+                <span
+                  >Every response helps us understand what customers value
+                  most.</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="shell form-wrap">
+            <aside class="side-card">
+              <h2>Share your experience</h2>
+              <p>
+                Please answer based on the Sambethel Taste bread you most
+                recently purchased or tasted.
+              </p>
+              <div class="progress-label">
+                <span>Survey progress</span><span id="progressText">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+              <div class="side-list">
+                <div>
+                  <span class="mini-icon">1</span
+                  ><span
+                    >Rate the product honestly so we can identify what is
+                    working.</span
+                  >
+                </div>
+                <div>
+                  <span class="mini-icon">2</span
+                  ><span
+                    >Choose the improvement that would matter most to you.</span
+                  >
+                </div>
+                <div>
+                  <span class="mini-icon">3</span
+                  ><span
+                    >Add an optional comment if you want to explain your
+                    answer.</span
+                  >
+                </div>
+              </div>
+            </aside>
+
+            <div class="form-card">
+              <div class="form-head">
+                <div>
+                  <h2>Bread Feedback Survey</h2>
+                  <p>
+                    Your responses are combined with other customer feedback for
+                    analysis.
+                  </p>
+                </div>
+                <span class="pill">5 questions</span>
+              </div>
+
+              <form id="feedbackForm">
+                <div class="question" data-question="quality">
+                  <div class="q-head">
+                    <span class="q-num">1</span>
+                    <h3>
+                      How would you rate the overall quality of our bread?
+                    </h3>
+                  </div>
+                  <div class="options">
+                    <label class="option"
+                      ><input required type="radio" name="quality" value="5" />
+                      Excellent</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="quality" value="4" />
+                      Good</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="quality" value="3" />
+                      Average</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="quality" value="2" />
+                      Poor</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="quality" value="1" /> Very
+                      Poor</label
+                    >
+                  </div>
+                </div>
+
+                <div class="question" data-question="taste">
+                  <div class="q-head">
+                    <span class="q-num">2</span>
+                    <h3>How satisfied are you with the taste of our bread?</h3>
+                  </div>
+                  <div class="options">
+                    <label class="option"
+                      ><input required type="radio" name="taste" value="5" />
+                      Very Satisfied</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="taste" value="4" />
+                      Satisfied</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="taste" value="3" />
+                      Neutral</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="taste" value="2" />
+                      Dissatisfied</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="taste" value="1" /> Very
+                      Dissatisfied</label
+                    >
+                  </div>
+                </div>
+
+                <div class="question" data-question="freshness">
+                  <div class="q-head">
+                    <span class="q-num">3</span>
+                    <h3>
+                      How satisfied are you with the freshness and texture of
+                      our bread?
+                    </h3>
+                  </div>
+                  <div class="options">
+                    <label class="option"
+                      ><input
+                        required
+                        type="radio"
+                        name="freshness"
+                        value="5"
+                      />
+                      Very Satisfied</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="freshness" value="4" />
+                      Satisfied</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="freshness" value="3" />
+                      Neutral</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="freshness" value="2" />
+                      Dissatisfied</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="freshness" value="1" /> Very
+                      Dissatisfied</label
+                    >
+                  </div>
+                </div>
+
+                <div class="question" data-question="value">
+                  <div class="q-head">
+                    <span class="q-num">4</span>
+                    <h3>
+                      Do you think the price of our bread gives good value for
+                      money?
+                    </h3>
+                  </div>
+                  <div class="options">
+                    <label class="option"
+                      ><input required type="radio" name="value" value="Yes" />
+                      Yes</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="value" value="No" /> No</label
+                    >
+                    <label class="option"
+                      ><input type="radio" name="value" value="Not Sure" /> Not
+                      Sure</label
+                    >
+                  </div>
+                </div>
+
+                <div class="question" data-question="improvement">
+                  <div class="q-head">
+                    <span class="q-num">5</span>
+                    <h3>
+                      What would you most like us to improve about our bread?
+                    </h3>
+                  </div>
+                  <select name="improvement" required>
+                    <option value="" disabled selected>
+                      Select one improvement
+                    </option>
+                    <option>Better taste</option>
+                    <option>Better freshness</option>
+                    <option>Softer texture</option>
+                    <option>Lower price</option>
+                    <option>Better packaging</option>
+                    <option>Larger size</option>
+                    <option>Healthier ingredients</option>
+                    <option>No improvement needed</option>
+                    <option>Other</option>
+                  </select>
+                  <textarea
+                    name="comment"
+                    placeholder="Optional: tell us more about your experience or suggestion"
+                  ></textarea>
+                </div>
+
+                <div id="formStatus" class="status"></div>
+                <div class="submit-row">
+                  <div class="privacy-copy">
+                    Your response is used by Sambethel Taste to understand
+                    customer experience and improve the product.
+                  </div>
+                  <button class="btn orange" type="submit" id="submitBtn">
+                    Submit Feedback
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <main class="admin-view">
+        <div class="shell">
+          <div class="admin-top">
+            <div>
+              <h1>Customer Insight Dashboard</h1>
+              <p>
+                Private analysis of Sambethel Taste bread feedback stored in
+                MongoDB.
+              </p>
+            </div>
+            <div class="admin-actions">
+              <button class="btn ghost" id="refreshBtn">Refresh</button>
+              <button class="btn ghost" id="printBtn">Print / Save PDF</button>
+              <button class="btn primary" id="exportBtn">Export CSV</button>
+            </div>
+          </div>
+
+          <div id="dashboardLoading" class="report-card loading-card">
+            <div>
+              <div class="spinner"></div>
+              Loading customer insights...
+            </div>
+          </div>
+          <div id="dashboardContent" style="display: none">
+            <section class="report-banner">
+              <div>
+                <div class="label">Executive Customer Feedback Report</div>
+                <h2>Sambethel Taste Bread Performance</h2>
+                <p id="reportPeriod">Response period will appear here.</p>
+              </div>
+              <div class="score-ring" id="scoreRing" style="--score: 0">
+                <div>
+                  <strong id="overallScore">0%</strong
+                  ><span>overall score</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="kpi-grid">
+              <div class="kpi">
+                <span>Total Responses</span
+                ><strong id="totalResponses">0</strong
+                ><small>customer submissions</small>
+              </div>
+              <div class="kpi orange">
+                <span>Avg. Quality</span><strong id="avgQuality">0.0/5</strong
+                ><small id="qualityPositive">0% rated good or excellent</small>
+              </div>
+              <div class="kpi">
+                <span>Taste Satisfaction</span><strong id="tasteSat">0%</strong
+                ><small id="avgTaste">average 0.0/5</small>
+              </div>
+              <div class="kpi">
+                <span>Freshness Satisfaction</span
+                ><strong id="freshnessSat">0%</strong
+                ><small id="avgFreshness">average 0.0/5</small>
+              </div>
+              <div class="kpi orange">
+                <span>Value for Money</span><strong id="valueYes">0%</strong
+                ><small>answered yes</small>
+              </div>
+            </section>
+
+            <section class="report-grid">
+              <div class="report-card">
+                <div class="section-head">
+                  <div>
+                    <h3>Executive Summary</h3>
+                    <p>
+                      Plain-language interpretation of the current feedback.
+                    </p>
+                  </div>
+                  <span class="section-badge">At a glance</span>
+                </div>
+                <div class="insight-list" id="insightList"></div>
+              </div>
+              <div class="report-card">
+                <div class="section-head">
+                  <div>
+                    <h3>Performance Overview</h3>
+                    <p>
+                      Positive response rate across the main experience
+                      measures.
+                    </p>
+                  </div>
+                </div>
+                <div class="metric-list" id="performanceMetrics"></div>
+              </div>
+            </section>
+
+            <section class="report-grid">
+              <div class="report-card">
+                <div class="section-head">
+                  <div>
+                    <h3>Improvement Priorities</h3>
+                    <p>
+                      What customers most often want Sambethel Taste to improve.
+                    </p>
+                  </div>
+                  <span class="section-badge" id="topPriorityBadge"
+                    >No data</span
+                  >
+                </div>
+                <div class="priority-list" id="improvementList"></div>
+              </div>
+              <div class="report-card">
+                <div class="section-head">
+                  <div>
+                    <h3>Value Perception</h3>
+                    <p>
+                      How customers assess price relative to the bread
+                      experience.
+                    </p>
+                  </div>
+                </div>
+                <div id="valueSummary" class="empty">No responses yet.</div>
+              </div>
+            </section>
+
+            <section class="report-card">
+              <div class="section-head">
+                <div>
+                  <h3>Quality Rating Distribution</h3>
+                  <p>Distribution of overall product quality scores.</p>
+                </div>
+              </div>
+              <div class="metric-list" id="qualityDistribution"></div>
+            </section>
+
+            <section class="report-card" style="margin-top: 18px">
+              <div class="section-head">
+                <div>
+                  <h3>Recent Customer Responses</h3>
+                  <p>
+                    The 15 most recent submissions for context behind the
+                    summary metrics.
+                  </p>
+                </div>
+                <span class="section-badge" id="commentRateBadge"
+                  >0% with comments</span
+                >
+              </div>
+              <div id="recentResponses"></div>
+            </section>
+
+            <div class="report-foot">
+              <span id="generatedAt">Report generated now</span
+              ><span>Sambethel Taste • Private management report</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="shell">© Sambethel Taste • Customer Feedback</div>
+      </footer>
+    </div>
+
+    <div
+      class="modal-backdrop"
+      id="loginModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="loginTitle"
+    >
+      <div class="modal">
+        <div class="modal-head">
+          <div>
+            <div class="lock-icon">🔒</div>
+            <h2 id="loginTitle" style="margin-top: 14px">Admin access</h2>
+            <p>
+              The analysis dashboard is restricted to authorized Sambethel Taste
+              staff.
+            </p>
+          </div>
+          <button
+            class="btn ghost icon-btn"
+            id="closeLoginBtn"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <form id="adminLoginForm">
+          <div>
+            <label for="adminPassword">Admin password</label
+            ><input
+              id="adminPassword"
+              type="password"
+              autocomplete="current-password"
+              required
+              placeholder="Enter password"
+            />
+          </div>
+          <div class="modal-error" id="loginError"></div>
+          <div class="modal-actions">
+            <button type="button" class="btn ghost" id="cancelLoginBtn">
+              Cancel</button
+            ><button type="submit" class="btn primary" id="loginSubmitBtn">
+              Open Dashboard
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+      const form = $("feedbackForm");
+      const progressBar = $("progressBar");
+      const progressText = $("progressText");
+      const formStatus = $("formStatus");
+      const submitBtn = $("submitBtn");
+      const loginModal = $("loginModal");
+      const adminPassword = $("adminPassword");
+      const loginError = $("loginError");
+      const loginSubmitBtn = $("loginSubmitBtn");
+      const dashboardLoading = $("dashboardLoading");
+      const dashboardContent = $("dashboardContent");
+
+      const qualityLabels = {
+        5: "Excellent",
+        4: "Good",
+        3: "Average",
+        2: "Poor",
+        1: "Very Poor",
+      };
+      const satisfactionLabels = {
+        5: "Very Satisfied",
+        4: "Satisfied",
+        3: "Neutral",
+        2: "Dissatisfied",
+        1: "Very Dissatisfied",
+      };
+
+      function escapeHtml(value) {
+        return String(value ?? "").replace(
+          /[&<>'"]/g,
+          (c) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              "'": "&#39;",
+              '"': "&quot;",
+            })[c],
+        );
+      }
+
+      function setStatus(message, type) {
+        formStatus.className = `status show ${type}`;
+        formStatus.textContent = message;
+      }
+
+      function updateProgress() {
+        const requiredNames = [
+          "quality",
+          "taste",
+          "freshness",
+          "value",
+          "improvement",
+        ];
+        let complete = 0;
+        const fd = new FormData(form);
+        requiredNames.forEach((name) => {
+          if (fd.get(name)) complete++;
+        });
+        const pct = Math.round((complete / requiredNames.length) * 100);
+        progressBar.style.width = `${pct}%`;
+        progressText.textContent = `${pct}%`;
+      }
+
+      form.addEventListener("change", updateProgress);
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+        formStatus.className = "status";
+        const fd = new FormData(form);
+        const payload = {
+          quality: Number(fd.get("quality")),
+          taste: Number(fd.get("taste")),
+          freshness: Number(fd.get("freshness")),
+          value: fd.get("value"),
+          improvement: fd.get("improvement"),
+          comment: (fd.get("comment") || "").trim(),
+        };
+        try {
+          const res = await fetch("/api/feedback", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const body = await res.json().catch(() => ({}));
+          if (!res.ok)
+            throw new Error(body.error || "Could not submit feedback.");
+          form.reset();
+          updateProgress();
+          setStatus(
+            "Thank you. Your feedback has been recorded successfully.",
+            "success",
+          );
+          window.scrollTo({
+            top: document.querySelector(".form-card").offsetTop - 90,
+            behavior: "smooth",
+          });
+        } catch (err) {
+          setStatus(
+            err.message || "Could not submit feedback. Please try again.",
+            "error",
+          );
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit Feedback";
+        }
+      });
+
+      function openLogin() {
+        loginError.classList.remove("show");
+        loginError.textContent = "";
+        adminPassword.value = "";
+        loginModal.classList.add("open");
+        setTimeout(() => adminPassword.focus(), 80);
+      }
+      function closeLogin() {
+        loginModal.classList.remove("open");
+      }
+
+      $("adminLoginBtn").addEventListener("click", openLogin);
+      $("closeLoginBtn").addEventListener("click", closeLogin);
+      $("cancelLoginBtn").addEventListener("click", closeLogin);
+      loginModal.addEventListener("click", (e) => {
+        if (e.target === loginModal) closeLogin();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLogin();
+      });
+
+      $("adminLoginForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        loginSubmitBtn.disabled = true;
+        loginSubmitBtn.textContent = "Checking...";
+        loginError.classList.remove("show");
+        try {
+          const res = await fetch("/api/admin/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ password: adminPassword.value }),
+          });
+          const body = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(body.error || "Could not sign in.");
+          closeLogin();
+          enterAdminMode();
+          await loadDashboard();
+        } catch (err) {
+          loginError.textContent = err.message;
+          loginError.classList.add("show");
+        } finally {
+          loginSubmitBtn.disabled = false;
+          loginSubmitBtn.textContent = "Open Dashboard";
+        }
+      });
+
+      function enterAdminMode() {
+        document.body.classList.add("admin-mode");
+        $("adminLoginBtn").style.display = "none";
+        $("logoutBtn").style.display = "inline-flex";
+        $("customerViewBtn").style.display = "inline-flex";
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+      function leaveAdminMode() {
+        document.body.classList.remove("admin-mode");
+        $("adminLoginBtn").style.display = "inline-flex";
+        $("logoutBtn").style.display = "none";
+        $("customerViewBtn").style.display = "none";
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+
+      $("customerViewBtn").addEventListener("click", leaveAdminMode);
+      $("brandHome").addEventListener("click", (e) => {
+        e.preventDefault();
+        leaveAdminMode();
+      });
+      $("logoutBtn").addEventListener("click", async () => {
+        try {
+          await fetch("/api/admin/logout", { method: "POST" });
+        } catch {}
+        leaveAdminMode();
+      });
+
+      $("refreshBtn").addEventListener("click", loadDashboard);
+      $("printBtn").addEventListener("click", () => window.print());
+      $("exportBtn").addEventListener("click", async () => {
+        try {
+          const res = await fetch("/api/export.csv");
+          if (res.status === 401) {
+            leaveAdminMode();
+            openLogin();
+            throw new Error("Your admin session has expired.");
+          }
+          if (!res.ok) throw new Error("Could not export feedback.");
+          const blob = await res.blob();
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "sambethel_taste_feedback.csv";
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(url);
+        } catch (err) {
+          if (err.message !== "Your admin session has expired.")
+            alert(err.message);
+        }
+      });
+
+      function pct(count, total) {
+        return total ? Math.round((count / total) * 100) : 0;
+      }
+      function formatDate(value) {
+        return value
+          ? new Date(value).toLocaleDateString(undefined, {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })
+          : "No responses yet";
+      }
+      function formatDateTime(value) {
+        return value
+          ? new Date(value).toLocaleString(undefined, {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            })
+          : "";
+      }
+
+      function metricRow(label, value, orange = false) {
+        const safe = Math.max(0, Math.min(100, Number(value) || 0));
+        return `<div class="metric-row"><div class="metric-label">${escapeHtml(label)}</div><div class="metric-track"><div class="metric-fill ${orange ? "orange" : ""}" style="width:${safe}%"></div></div><div class="metric-value">${safe}%</div></div>`;
+      }
+
+      function buildInsights(summary, improvements) {
+        if (!summary.total)
+          return `<div class="empty">Insights will appear after customers submit feedback.</div>`;
+        const metrics = [
+          { name: "Quality", value: summary.qualityPositivePercent },
+          { name: "Taste", value: summary.tasteSatisfactionPercent },
+          {
+            name: "Freshness & texture",
+            value: summary.freshnessSatisfactionPercent,
+          },
+          { name: "Value for money", value: summary.valueYesPercent },
+        ].sort((a, b) => b.value - a.value);
+        const strongest = metrics[0],
+          weakest = metrics[metrics.length - 1];
+        const top = improvements[0];
+        const topPct = top ? pct(top.count, summary.total) : 0;
+        return `
+      <div class="insight-card"><div class="insight-icon">✓</div><div><strong>Strongest customer signal</strong><span>${escapeHtml(strongest.name)} has the highest positive result at <b>${strongest.value}%</b>.</span></div></div>
+      <div class="insight-card"><div class="insight-icon orange">!</div><div><strong>Area to watch</strong><span>${escapeHtml(weakest.name)} is currently the lowest of the main measures at <b>${weakest.value}%</b>. Review comments and related improvement requests before deciding on action.</span></div></div>
+      <div class="insight-card"><div class="insight-icon orange">1</div><div><strong>Most requested improvement</strong><span>${top ? `<b>${escapeHtml(top.label)}</b> was selected by ${top.count} respondent${top.count === 1 ? "" : "s"} (${topPct}%).` : "No improvement preference has been recorded yet."}</span></div></div>
+      <div class="insight-card"><div class="insight-icon">i</div><div><strong>How to read this report</strong><span>Percentages summarize this feedback sample only. Use the pattern of results together with comments and response volume before making product changes.</span></div></div>`;
+      }
+
+      function buildPriorities(improvements, total) {
+        if (!improvements.length)
+          return `<div class="empty">No improvement requests yet.</div>`;
+        const max = Math.max(...improvements.map((r) => r.count), 1);
+        return improvements
+          .slice(0, 8)
+          .map(
+            (r, i) =>
+              `<div class="priority-row"><div class="rank">${i + 1}</div><div class="priority-label">${escapeHtml(r.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round((r.count / max) * 100)}%"></div></div><div class="bar-value">${r.count} · ${pct(r.count, total)}%</div></div>`,
+          )
+          .join("");
+      }
+
+      function buildValue(valueRows, total) {
+        if (!total) return `<div class="empty">No responses yet.</div>`;
+        const map = Object.fromEntries(
+          valueRows.map((r) => [r.label, r.count]),
+        );
+        const yes = map.Yes || 0,
+          no = map.No || 0,
+          unsure = map["Not Sure"] || 0;
+        const yp = pct(yes, total),
+          np = pct(no, total),
+          up = pct(unsure, total);
+        return `<div class="value-segment" aria-label="Value for money response breakdown"><div class="seg-yes" style="width:${yp}%"></div><div class="seg-no" style="width:${np}%"></div><div class="seg-unsure" style="width:${up}%"></div></div>
+      <div class="legend"><span><i style="background:var(--green-700)"></i>Yes ${yes} (${yp}%)</span><span><i style="background:var(--orange-600)"></i>No ${no} (${np}%)</span><span><i style="background:#9daaa4"></i>Not sure ${unsure} (${up}%)</span></div>`;
+      }
+
+      function buildQualityDistribution(rows, total) {
+        if (!total) return `<div class="empty">No quality ratings yet.</div>`;
+        const map = new Map(rows.map((r) => [Number(r.score), r.count]));
+        return [5, 4, 3, 2, 1]
+          .map((score) => {
+            const count = map.get(score) || 0;
+            return metricRow(
+              `${qualityLabels[score]} (${count})`,
+              pct(count, total),
+              score <= 2,
+            );
+          })
+          .join("");
+      }
+
+      function buildRecent(rows) {
+        if (!rows.length)
+          return `<div class="empty">No feedback has been submitted yet.</div>`;
+        return `<div class="table-wrap"><table><thead><tr><th>Date</th><th>Quality</th><th>Taste</th><th>Freshness</th><th>Value</th><th>Improvement</th><th>Comment</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${escapeHtml(formatDateTime(r.createdAt))}</td><td>${escapeHtml(qualityLabels[r.quality] || r.quality)}</td><td>${escapeHtml(satisfactionLabels[r.taste] || r.taste)}</td><td>${escapeHtml(satisfactionLabels[r.freshness] || r.freshness)}</td><td>${escapeHtml(r.value)}</td><td>${escapeHtml(r.improvement)}</td><td class="comment-cell">${escapeHtml(r.comment || "—")}</td></tr>`).join("")}</tbody></table></div>`;
+      }
+
+      async function loadDashboard() {
+        dashboardLoading.style.display = "grid";
+        dashboardContent.style.display = "none";
+        try {
+          const res = await fetch("/api/dashboard");
+          if (res.status === 401) {
+            leaveAdminMode();
+            openLogin();
+            throw new Error("Admin session expired. Please sign in again.");
+          }
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok)
+            throw new Error(data.error || "Could not load dashboard.");
+          const s = data.summary;
+          $("totalResponses").textContent = s.total;
+          $("avgQuality").textContent =
+            `${Number(s.avgQuality || 0).toFixed(1)}/5`;
+          $("qualityPositive").textContent =
+            `${s.qualityPositivePercent}% rated good or excellent`;
+          $("tasteSat").textContent = `${s.tasteSatisfactionPercent}%`;
+          $("avgTaste").textContent =
+            `average ${Number(s.avgTaste || 0).toFixed(1)}/5`;
+          $("freshnessSat").textContent = `${s.freshnessSatisfactionPercent}%`;
+          $("avgFreshness").textContent =
+            `average ${Number(s.avgFreshness || 0).toFixed(1)}/5`;
+          $("valueYes").textContent = `${s.valueYesPercent}%`;
+          $("overallScore").textContent = `${s.overallScorePercent}%`;
+          $("scoreRing").style.setProperty(
+            "--score",
+            s.overallScorePercent || 0,
+          );
+          $("reportPeriod").textContent = s.total
+            ? `Feedback collected from ${formatDate(s.firstResponse)} to ${formatDate(s.lastResponse)} • ${s.total} total response${s.total === 1 ? "" : "s"}`
+            : "No customer responses have been collected yet.";
+          $("insightList").innerHTML = buildInsights(s, data.improvements);
+          $("performanceMetrics").innerHTML = [
+            metricRow("Quality", s.qualityPositivePercent),
+            metricRow("Taste", s.tasteSatisfactionPercent),
+            metricRow("Freshness", s.freshnessSatisfactionPercent),
+            metricRow("Value", s.valueYesPercent, true),
+          ].join("");
+          $("improvementList").innerHTML = buildPriorities(
+            data.improvements,
+            s.total,
+          );
+          const top = data.improvements[0];
+          $("topPriorityBadge").textContent = top
+            ? `Top: ${top.label}`
+            : "No data";
+          $("valueSummary").className = "";
+          $("valueSummary").innerHTML = buildValue(data.value, s.total);
+          $("qualityDistribution").innerHTML = buildQualityDistribution(
+            data.ratings.quality,
+            s.total,
+          );
+          $("recentResponses").innerHTML = buildRecent(data.recent);
+          $("commentRateBadge").textContent =
+            `${s.commentPercent}% with comments`;
+          $("generatedAt").textContent =
+            `Generated ${new Date().toLocaleString()}`;
+          dashboardLoading.style.display = "none";
+          dashboardContent.style.display = "block";
+        } catch (err) {
+          dashboardLoading.innerHTML = `<div class="empty">${escapeHtml(err.message)}</div>`;
+        }
+      }
+
+      (async function restoreSession() {
+        try {
+          const res = await fetch("/api/admin/session");
+          const body = await res.json();
+          if (body.authenticated) {
+            /* Keep customers on survey unless they explicitly choose admin access. */
+          }
+        } catch {}
+      })();
+    </script>
+  </body>
+</html>

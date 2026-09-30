@@ -1,0 +1,19 @@
+{
+  "name": "sambethel-taste-feedback",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sambethel Taste customer feedback website with MongoDB storage and analysis dashboard.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0"
+  }
+}
